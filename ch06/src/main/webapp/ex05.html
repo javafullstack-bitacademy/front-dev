@@ -16,9 +16,17 @@
 		- DOM Tree의 가각의 요소
 */
 
-
+// DOM Loading이 완료된 시점
+window.addEventListener('load', function(){
+	let el = document.getElementById('header-1');
+	console.log(el);
+});
 </script>
 </head>
 <body>
+	<h1 id="header-1">step1</h1>
+	<script>alert("step2")</script>	
+	<h1>step3</h1>
+	<script>alert("step4")</script>	
 </body>
 </html>
