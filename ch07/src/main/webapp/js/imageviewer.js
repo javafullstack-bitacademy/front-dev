@@ -37,9 +37,16 @@ const ImageViewer = {
 			'title': info.name
 		});
 	},
+	_consoleImageLog: function(){
+		let name = $(this).attr('alt');
+		console.log(name);
+	},
 	init: function(){
 		$(function(){
 			$('.image-viewer #btn-change').click(ImageViewer._changeImage);
+			$('.image-viewer img')
+				.mousedown(ImageViewer._changeImage)
+				.dblclick(ImageViewer._consoleImageLog);
 		
 			// 디폴트 이미지 선택하기
 			ImageViewer._changeImage();
